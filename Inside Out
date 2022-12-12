@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include<string.h>
+
+int main()
+{
+    int t,l,i;
+    char line[102],revised[102];
+    
+    scanf("%d",&t);
+    getchar();
+    
+    while(t--)
+    {
+        gets(line);
+        
+        l=strlen(line);
+        
+        for(i=0;i<l/2;i++)
+        {
+            revised[i]=line[l/2 -1 - i];
+        }
+    
+        int k=l-1;
+        
+        for(i=l/2;i<l;i++)
+        {
+            revised[i]=line[k];
+            k--;
+        }
+        
+        revised[i]='\0';
+        puts(revised);
+        
+    }
+    
+    return 0;
+}
